@@ -3,4 +3,18 @@
     <mat-icon>home</mat-icon>
   </button>
   <button mat-button routerLink="protected">try</button>
+
+  <span class="example-spacer"></span>
+
+  @if(authenticated()) {
+    <button mat-button (click)="doLogout()" >
+      Logout {{ userInfo()?.name }}
+    </button>
+
+  } @else {
+    <button mat-button (click)="doLogin()" >
+      Login
+    </button>
+  }
+
 </mat-toolbar>

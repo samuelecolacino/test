@@ -66,6 +66,9 @@
               "buildTarget": "probe:build:development"
             }
           },
+          "options": {
+            "port": 4222
+          },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {

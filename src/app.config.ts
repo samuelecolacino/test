@@ -8,7 +8,7 @@ export const provideKeycloakAngular = () =>
     config: {
       url: 'http://localhost:38081/',
       realm: 'dev',
-      clientId: 'angular-app'
+      clientId: 'client-app'
     },
     initOptions: {
       onLoad: 'check-sso',

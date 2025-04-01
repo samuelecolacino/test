@@ -6,7 +6,8 @@ import { ProtectedComponent } from "./app/protected/protected.component";
 export const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    pathMatch: 'full',
+    redirectTo: 'home'
   },
   {
     path: 'home',
@@ -16,5 +17,9 @@ export const routes: Routes = [
     path: 'protected',
     component: ProtectedComponent,
     canActivate: [authGuard]
+  },
+  {
+    path: '**',
+    redirectTo: 'home'
   }
 ];
